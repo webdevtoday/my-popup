@@ -1,0 +1,72 @@
+.mp-modal {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: -150%;
+    left: 0;
+    transition: top .5s ease-in;
+}
+.mp-modal h5,
+.mp-modal p {
+    margin: 0;
+}
+.mp-modal__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.mp-modal__window {
+    background-color: #fff;
+    border-radius: 5px;
+    width: 600px;
+}
+.mp-modal__header {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+.mp-modal__title {
+    font-size: 21px;
+    margin: 0;
+}
+.mp-modal__close {
+    cursor: pointer;
+}
+.mp-modal__icon-close {}
+.mp-modal__content {
+    padding: 10px;
+}
+.mp-modal__footer {
+    padding: 10px;
+    border-top: 1px solid #333;
+}
+
+
+/* Animation */
+.mp-modal,
+.mp-modal__window {
+    opacity: 0;
+    z-index: -1;
+}
+.mp-modal--open,
+.mp-modal--open .mp-modal__window {
+    opacity: 1;
+    z-index: 1000;
+}
+.mp-modal--close,
+.mp-modal--close .mp-modal__window {
+    opacity: 1;
+    z-index: 1000;
+}
+.mp-modal--open {
+    top: 0;
+}
+.mp-modal--close {
+    top: 200%;;
+}
+/* Animation */
